@@ -1,0 +1,8 @@
+.buzzbox {
+    float: left;
+    height: 20vw;
+    margin: 1%;
+    width: 20vw;
+    border: 3px solid red;
+    text-align: center;
+}
