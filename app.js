@@ -1,38 +1,36 @@
 var app = angular.module('BuzzwordBingo', []);
 
-// app.config(function($routeProvider) {
-//     $routeProvider
-//     .when('/', {
-//         controller: 'MainController',
-//         templateUrl: 'index.html'
-//     });
-// });
+app.factory('buzzwords', function(){
+    var buzzwords = {};
 
-// app.factory('buzzwords', function(){
-//     var buzzwords = {};
+    buzzwords.list = [];
 
-//     buzzwords.list = [];
+    buzzwords.add = function(buzzword) {
+        buzzwords.list.push({id: buzzwords.list.length, text: buzzword});
+    }
 
-//     buzzwords.add = function(buzzword) {
-//         buzzwords.list.push({id: buzzwords.list.length, text: buzzword});
-//     };
-
-//     return buzzwords;
-// });
-
-app.controller('MainController', function(){
-
-    var self = this;
-
-    self.buzzword = "Hello";
-    
-    self.changeBuzzword = function(buzzword){
-        self.buzzword = buzzword;
-    };
+    return buzzwords;
 });
 
-// app.factory('buzzwords', function(){
-//     var buzzwords = {};
+app.controller('ListCtrl', function(buzzwords){
+    var self = this;
 
-//     return buzzwords;
-// })
+    self.buzzwords = buzzwords.list;
+});
+
+app.controller('PostCtrl', function(buzzwords){
+    var self = this;
+
+    self.addBuzzword = function(buzzword) {
+        buzzwords.add(buzzword);
+        self.newBuzzword = '';
+    }
+});
+
+
+
+
+
+
+
+

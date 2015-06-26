@@ -1,8 +1,61 @@
-.buzzbox {
-    float: left;
-    height: 20vw;
-    margin: 1%;
-    width: 20vw;
-    border: 3px solid red;
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: black;
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 6vh;
     text-align: center;
 }
+
+h2 {
+    
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 3.0vh;
+    margin: 0;
+    text-align: center;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2.5vmin; 
+}
+
+.buzzbox {
+    float: left;
+    height: 15vw;
+    width: 15vw;
+    margin: 1%;
+    border: 3px solid #1abc9c;
+    border-radius: 5px;
+    text-align: center;
+    background-color: none;
+}
+
+.buzzcontainer {
+    margin-left: 15vw;
+    margin-right: 13vw;
+}
+
+.buzzform {
+    text-align: center;
+}
+
+.buzzbox:hover {
+    background-color: #1abc9c;
+}
+
+#navigation {
+    height: 50px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    margin: 0;
+}
+
