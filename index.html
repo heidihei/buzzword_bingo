@@ -31,7 +31,7 @@
     </br>
     <div class="buzzcontainer"> 
         <div ng-controller="ListCtrl as list">
-            <div class="buzzbox" ng-repeat="buzzword in list.buzzwords" ng-style="myStyle" ng-click="myStyle={'background-color':'#1abc9c'}"><p>{{buzzword.text}}</p></div>
+            <div class="buzzbox" ng-repeat="buzzword in list.buzzwords | limitTo: 16" ng-style="myStyle" ng-click="myStyle={'background-color':'#1abc9c'}"><p>{{buzzword.text}}</p></div>
         </div>
     </div>
     </br>
